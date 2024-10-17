@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Review</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/add">Add Restaurant</a>
+        <a href="/restaurants">All Restaurants</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="container">
+        <h1>Restaurants</h1>
+        <ul>
+            {% for restaurant in restaurants %}
+            <li>
+                <a href="{{ url_for('restaurant_detail', id=restaurant.id) }}">
+                    {{ restaurant.name }}
+                </a> - {{ restaurant.location }} - {{ restaurant.cuisine_type }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Restaurant Review App. Inspired by <a href="https://www.nts.live" target="_blank">NTS.live</a></p>
+        </div>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Review</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/add">Add Restaurant</a>
+        <a href="/restaurants">All Restaurants</a>
+    </div>
+    
+<div class="container">
+<h1>{{ restaurant.name }}</h1>
+<p>{{ restaurant.location }} | {{ restaurant.cuisine_type }}</p>
+<h2>Reviews:</h2>
+<ul>
+    {% for review in reviews %}
+    <li><strong>{{ review.user }}</strong>: {{ review.comment }} ({{ review.rating }} stars)</li>
+    {% endfor %}
+</ul>
+
+<h3>Add a Review</h3>
+<form method="POST">
+    <label for="user">Name:</label>
+    <input type="text" name="user" required>
+    <label for="comment">Review:</label>
+    <textarea name="comment" required></textarea>
+    <label for="rating">Rating:</label>
+    <input type="number" name="rating" min="1" max="5" required>
+    <button type="submit">Submit</button>
+</form>
+</div>
+</body>

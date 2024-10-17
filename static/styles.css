@@ -1,0 +1,77 @@
+/* Base styles for the website */
+body {
+    background-color: #1a1a1a; /* Dark background */
+    color: #ffffff; /* Light text */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean, modern font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+a {
+    color: #ffffff; /* Light links */
+    text-decoration: none;
+    border-bottom: 2px solid #f9a825; /* Subtle hover effect */
+}
+
+a:hover {
+    color: #f9a825; /* Highlight color on hover */
+    border-bottom-color: #ffffff;
+}
+
+h1, h2, h3 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+/* Add some padding for content */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color: #000000;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ffffff;
+    margin: 0 15px;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    color: #f9a825; /* The same highlight yellow */
+}
+
+button {
+    background-color: #f9a825;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
